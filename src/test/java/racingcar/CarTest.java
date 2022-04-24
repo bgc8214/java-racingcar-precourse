@@ -13,4 +13,10 @@ public class CarTest {
         assertThat(car).isEqualTo(new Car("car"));
     }
 
+    @Test
+    public void car_move_test() {
+        Car car = new Car("car");
+        car.move(4);
+        assertThat(car.getPosition()).isEqualTo(1);
+    }
 }

@@ -4,6 +4,8 @@ import java.util.Objects;
 
 public class Car {
 
+    private static final int CAR_MOVE_UNDER_LIMIT = 4;
+
     private CarName carName;
     private Position position;
 
@@ -14,6 +16,16 @@ public class Car {
     public Car(String name, int position) {
         this.carName = new CarName(name);
         this.position = new Position(position);
+    }
+
+    public void move(int number) {
+        if (number >= CAR_MOVE_UNDER_LIMIT) {
+            position.move();
+        }
+    }
+
+    public int getPosition() {
+        return position.getValue();
     }
 
     @Override
