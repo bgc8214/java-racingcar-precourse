@@ -1,5 +1,6 @@
 package racingcar.domain;
 
+import camp.nextstep.edu.missionutils.Randoms;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,12 @@ public class Cars {
 
     public Cars(List<Car> carList) {
         this.carList = carList;
+    }
+
+    public void moveCars() {
+        for (Car car : carList) {
+            car.move(Randoms.pickNumberInRange(0, 9));
+        }
     }
 
     public List<Car> getWinner() {
@@ -32,6 +39,10 @@ public class Cars {
             maxPosition = car.getMaxPosition(maxPosition);
         }
         return maxPosition;
+    }
+
+    public List<Car> getValue() {
+        return carList;
     }
 
 }
