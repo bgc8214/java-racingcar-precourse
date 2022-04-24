@@ -21,8 +21,16 @@ public class GameManager {
         this.cars = new Cars(ragingCarList);
     }
 
+    public void startRacing() {
+        cars.moveCars();
+    }
+
+
     public List<Car> getCarList() {
         return cars.getValue();
     }
 
+    public List<Car> getRacingWinners() {
+        return cars.getWinner();
+    }
 }
