@@ -13,7 +13,6 @@ public class ResultView {
         System.out.println();
     }
 
-
     public static void racingWinnerResult(List<Car> racingWinners) {
         String winnerNames = "";
         for (Car car : racingWinners) {

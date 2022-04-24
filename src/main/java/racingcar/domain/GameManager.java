@@ -25,7 +25,6 @@ public class GameManager {
         cars.moveCars();
     }
 
-
     public List<Car> getCarList() {
         return cars.getValue();
     }
