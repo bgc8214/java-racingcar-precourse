@@ -13,4 +13,15 @@ public class PositionTest {
         assertThat(position).isEqualTo(new Position(1));
     }
 
+    @Test
+    public void move_test() {
+        Position position = new Position();
+        assertThat(position.move()).isEqualTo(new Position(1));
+    }
+
+    @Test
+    public void get_position_test() {
+        Position position = new Position(5);
+        assertThat(position.getValue()).isEqualTo(5);
+    }
 }
